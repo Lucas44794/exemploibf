@@ -1,8 +1,11 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for
+from flask_mail import Message
 from werkzeug.utils import secure_filename
 import psycopg2  
 from psycopg2.extras import RealDictCursor
+from datetime import datetime
+
 
 app = Flask(__name__)
 
@@ -167,6 +170,48 @@ def excluir_slide(slide_id):
         erro_msg = str(e)
         print(f"ERRO ao excluir slide: {erro_msg}")
         return f"<h3 style='text-align:center;'>Erro ao excluir: {erro_msg}</h3>"
+
+
+@app.route('/contato', methods=['GET', 'POST'])
+def contato():
+    if request.method == 'POST':
+        try:
+            from app import mail  # Importa o objeto mail configurado no app.py
+
+            nome = request.form.get('nomesobrenome')
+            email = request.form.get('email')
+            telefone = request.form.get('telefone')
+            mensagem = request.form.get('mensagem')
+            curso = request.form.get('cursosescolhidos')
+            horario = request.form.get('horario')
+            modalidade = request.form.get('modalidade')
+            ip = request.remote_addr
+
+            msg = Message(
+                subject='Novo Formulário de Contato',
+                sender='novoalunoaqui@gmail.com',
+                recipients=['lucasr.prodata@gmail.com']
+            )
+            msg.body = f"""
+            Nome: {nome}
+            E-mail: {email}
+            Telefone: {telefone}
+            Mensagem: {mensagem}
+            Curso Escolhido: {curso}
+            Horário Preferido: {horario}
+            Modalidade do Curso: {modalidade}
+            IP: {ip}
+            Enviado em: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}
+            """
+            mail.send(msg)
+            return redirect(url_for('contato', success=True))
+
+        except Exception as e:
+            return render_template('contato.html', erro_envio=True)
+
+    return render_template('contato.html')
+
+
 
 
 
