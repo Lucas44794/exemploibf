@@ -7,6 +7,28 @@ body {
   font-family: 'Barlow', sans-serif;
   
 }
+.titulo-carousel{
+  margin-bottom: 80px;
+  font-size: 2.5rem;
+  color: white; /* Cor do texto */
+  text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+
+}
+.p-carousel{
+  font-size: 1.5rem;
+  margin-bottom: 100px;
+    color: white; /* Cor do texto */
+  text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
 .img-limite {
     max-height: 720px; /* Ajuste conforme necessário */
     width: 100%;
@@ -72,6 +94,7 @@ input[type="checkbox"]:focus {
 }
 footer {
   background-color: var(--marrom-claro);
+  
 }
 
 [data-bs-theme="dark"] {
@@ -136,4 +159,22 @@ body {
 
 main {
     flex: 1;
+    
+}
+
+.carousel-item {
+  height: 200px; /* Altura fixa do card */
+}
+
+.carousel-item img {
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  height: 700px;
+  width: 100%;
+}
+
+/* Media query para telas com largura até 990px */
+@media (min-width: 990px) {
+  .carousel-item {
+    height: 700px;
+  }
 }
