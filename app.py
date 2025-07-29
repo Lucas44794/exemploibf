@@ -145,15 +145,30 @@ def excluir_slide(slide_id):
             port="5432"
         )
         cursor = conn.cursor()
+
+        # Buscar o nome da imagem antes de excluir o registro
+        cursor.execute("SELECT imagem FROM carousel WHERE id = %s", (slide_id,))
+        resultado = cursor.fetchone()
+
+        # Se tiver imagem salva, tenta excluir o arquivo físico
+        if resultado and resultado[0]:
+            caminho_imagem = os.path.join('static', resultado[0])
+            if os.path.exists(caminho_imagem):
+                os.remove(caminho_imagem)
+
+        # Excluir o registro do banco
         cursor.execute("DELETE FROM carousel WHERE id = %s", (slide_id,))
         conn.commit()
         conn.close()
+
         return redirect('/painel')
+
     except Exception as e:
         erro_msg = str(e)
         print(f"ERRO ao excluir slide: {erro_msg}")
         return f"<h3 style='text-align:center;'>Erro ao excluir: {erro_msg}</h3>"
-    
+
+
 
 
 # Executa o servidor Flask
