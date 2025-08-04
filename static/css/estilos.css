@@ -30,7 +30,7 @@ body {
 }
 
 .img-limite {
-    max-height: 720px; /* Ajuste conforme necessário */
+    max-height: 720px;
     width: 100%;
     object-fit: cover;
 }
@@ -40,7 +40,10 @@ input[type=checkbox] {
 }
 .logozinho {
   width: 100px;
-  
+}
+.logomob {
+  width: 90px;
+
 }
 .card img {
     height: 200px; /* Ajuste conforme necessário */
@@ -214,5 +217,12 @@ main {
 @media (min-width: 990px) {
   .carousel-item {
     height: 700px;
+  }
+}
+
+@media (max-width: 990px) {
+  .img-limite {
+    height: 450px;
+    object-fit: cover;
   }
 }

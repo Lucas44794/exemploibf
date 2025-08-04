@@ -1,0 +1,91 @@
+{% extends '_partials_home/home_base_home.html' %}
+
+{% block content %}
+
+<main>
+
+    <section class="principal">
+        <h2 class="titulo-principal"><strong>Quem somos</strong></h2>
+
+        <img class="utensilios2" src="{{ url_for('static', filename='images/logo/logo.png') }}" alt="Bruno Vicentin e sua esposa Tamera Vicentin">
+
+        <p>O IBF nasceu com a visão de equipar homens e mulheres para o serviço cristão em suas respectivas igrejas. Seu conteúdo não apenas edifica a vida espiritual, mas também trabalha com o caráter, buscando conformar os alunos à imagem de Cristo. O objetivo principal é servir e espalhar a esperança.</p>
+
+        <p id="missao"><em>Nossa missão é: <strong>"Fornecer ensinamentos para todas as áreas da vida cristã, incentivando os alunos a praticarem os ensinos recebidos. Buscamos capacitá-los a entender seu chamado e a importância de seu serviço para o Corpo de Cristo"</strong>.</em></p>
+
+        <p>O IBF também se dedica a oferecer ensino fundamentado e material próprio, contribuindo para o desenvolvimento espiritual e emocional dos alunos. Nosso compromisso é trazer luz, pela Palavra de Deus, para aqueles que desejam crescer no conhecimento e na graça, diante de Deus e dos homens.</p>
+    </section>
+
+    <section class="principal">
+        <h2 class="titulo-principal"><strong>Direção da Escola</strong></h2>
+
+        <img class="utensilios" src="{{ url_for('static', filename='images/site/brunoVicentin.jpg') }}" alt="Bíblia aberta representando os ensinamentos do IBF">
+        <p id="missao"><em> <strong>Bruno Gustavo Vicentin</strong>.</em></p>
+        <p><strong>Bruno Vicentin</strong>, Diretor Geral do Instituto 
+            Bíblico Fé, formado e pós graduado em 
+            ADM com ênfase em gestão de pessoas, 
+            formação teológica pelo instituto 
+            Shekinah, instituto Tsamah, instituto 
+            formação crista IFC, aconselhamento IFC, 
+            Especialização pelo IFC TEXAS CRISTIAN, 
+            reconhecimento teológico Unicesumar,
+            Doutorado em novo testamento pela 
+            FABAD, Diretor executivo da Capelania 
+            Hospitalar de Santa Barbara d oeste, Líder 
+            do ministério de intercessão e 
+            aconselhamento da Comunidade Templo 
+            Vivo, formado em psicanálise Sexólogo, 
+            Terapia sistêmica familiar.
+            </p>
+
+        <p id="missao"><em><strong>Tamera Alves do Vale Vicentin</strong>.</em></p>
+
+        <p><strong>Tamera Vicentin</strong>, Secretaria Geral do Instituto Bíblico Fé, Formada 
+            em Contabilidade, Graduada em Pedagogia com pós em Psicopedagogia, formação 
+            em Teologia pelo IFC.</p>
+    </section>
+
+    <section class="principal">
+
+        <img class="utensilios" src="{{ url_for('static', filename='images/site/pastorPaulo.jpg') }}" alt="Pastor Paulo Morimoto e sua esposa Elenice Morimoto">
+        <p id="missao"><em> <strong>Pastores Paulo e Elenice Morimoto</strong>.</em></p>
+        <p><strong>Pastores CEO da Comunidade Templo Vivo</strong>,
+            ministério com mais de 30 anos servindo ao 
+            Senhor, são pastores de cobertura espiritual 
+            do Instituto Bíblico Fé, auxiliando como 
+            mentores e aconselhando a equipe 
+            ministerial do Instituto, já ministraram em 
+            diversas igrejas no Brasil. Trabalharam 
+            equipando pastores e ministros que estão 
+            espalhados pela nação anunciando o 
+            evangelho com caráter de Cristo, Paulo e 
+            Elenice são referências em pastorear igrejas e 
+            formar ministros.
+
+            </p>
+    </section>
+
+
+
+
+
+
+
+
+
+    <h3 class="titulo-principal">Lista De Cursos</h3>
+    <div class="conteudo-beneficios">
+        <ul class="lista-beneficios">
+            <li class="itens">Teologia Básica</li>
+            <li class="itens">Teologia Avançada</li>
+            <li class="itens">Clinica da Alma</li>
+            <li class="itens">Psicanalise Cristã</li>
+            <li class="itens">Prosperidade Biblica</li>
+            
+        </ul>
+        <img class='utensilios5' src="{{ url_for('static', filename='images/logo/estudo.jpg') }}" class="imagembeneficios" alt="Imagem dos Benefícios">
+    </div>
+
+    {% include '_partials_home/home_mapa_home.html' %}
+</main>
+{% endblock %}

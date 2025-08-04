@@ -1,0 +1,115 @@
+{% extends '_partials_home/home_base_home.html' %}
+
+{% block content %}
+
+<main>
+    
+    <div class="carousel">
+        <button class="prev">◀</button>
+        <a href="{{ url_for('contato.contato') }}">
+            <div class="carousel-container">
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/carrosel/1.jpg') }}" alt="Imagem 1">
+                    <div class="carousel-text">
+                        <h2>Inscreva-se Já</h2>
+                        <h3>Matriculas Abertas</h3>
+                        <p>Clique aqui</p>
+                        <p>E Saiba mais</p>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/carrosel/2.jpg') }}" alt="Imagem 2">
+                    <div class="carousel-text">
+                        <h2>Inscreva-se Já</h2>
+                        <h3>Matriculas Abertas</h3>
+                        <h2>Estudos Biblicos</h2>
+                        <p>Para maiores informações</p>
+                        <p>Clique aqui</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/carrosel/3.jpg') }}" alt="Imagem 3">
+                    <div class="carousel-text">
+                        <h2>Inscreva-se Já</h2>
+                        <h3>Matriculas Abertas</h3>
+                        <h2>Prosperidade Biblica</h2>
+                        <p>Clique aqui</p>
+                        <p>E Saiba mais</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/carrosel/4.jpg') }}" alt="Imagem 4">
+                    <div class="carousel-text">
+                        <h2>Inscreva-se Já</h2>
+                        <h3>Matriculas Abertas</h3>
+                        <h2>Psicanalise Cristã</h2>
+                        <p>Para maiores informações</p>
+                        <p>Clique aqui</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/carrosel/5.jpg') }}" alt="Imagem 5">
+                    <div class="carousel-text">
+                        <h2>Inscreva-se Já</h2>
+                        <h3>Matriculas Abertas</h3>
+                        <h2>Clinica da Alma</h2>
+                        <p>Clique aqui</p>
+                        <p>E saiba mais</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/carrosel/6.jpg') }}" alt="Imagem 6">
+                    <div class="carousel-text">
+                        <h2>Inscreva-se Já</h2>
+                        <h3>Matriculas Abertas</h3>
+                        <h2>Curso de Teologia</h2>
+                        <p>Para maiores informações</p>
+                        <p>Clique aqui</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/carrosel/7.jpg') }}" alt="Imagem 7">
+                    <div class="carousel-text">
+                        <h2>Inscreva-se Já</h2>
+                        <h3>Matriculas Abertas</h3>
+                        <p>Clique aqui</p>
+                        <p>E saiba mais</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <button class="next">▶</button>
+    </div>
+    
+    
+    
+    
+    
+
+    <section class="principal">
+        <h2 class="titulo-principal"><strong>Estude Teologia</strong></h2>
+
+        <img class="utensilios" src="{{ url_for('static', filename='images/logo/biblia2.png') }}" alt="Bíblia aberta representando os ensinamentos do IBF">
+
+        <p>A visão do IBF é equipar homens e mulheres para o serviço cristão em suas respectivas igrejas. Seus ensinos não apenas edificam a vida espiritual, mas também tratam do caráter, buscando conformá-los à imagem de Cristo.</p>
+
+        <p>Com esse trabalho, o IBF visa preparar seus alunos para servir e espalhar a esperança, impactando a comunidade e suas próprias vidas de maneira profunda e transformadora.</p>
+
+    </section>
+
+
+
+    <section class="beneficios">
+        <div class="video">
+        
+            <video controls width="100%" height="550px">
+                <source src="{{ url_for('static', filename='video/apresentacao.mp4') }}" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </div>
+        
+    </section>
+    {% include '_partials_home/home_mapa_home.html' %}
+</main>
+{% endblock %}
