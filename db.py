@@ -2,16 +2,22 @@ import os
 import psycopg2
 from dotenv import load_dotenv
 
-load_dotenv()  # Garante que as variáveis do .env sejam carregadas
+# Carrega variáveis do .env
+load_dotenv()
 
 def get_connection():
-    return psycopg2.connect(
-        host=os.getenv('DB_HOST', 'localhost'),
-        port=os.getenv('DB_PORT', '5432'),
-        dbname=os.getenv('DB_NAME'),
-        user=os.getenv('DB_USER'),
-        password=os.getenv('DB_PASSWORD')
-    )
+    # Prioriza DATABASE_URL se estiver definida
+    db_url = os.getenv('DATABASE_URL')
+    if db_url:
+        return psycopg2.connect(db_url)
+    else:
+        return psycopg2.connect(
+            host=os.getenv('DB_HOST', 'localhost'),
+            port=os.getenv('DB_PORT', '5432'),
+            dbname=os.getenv('DB_NAME'),
+            user=os.getenv('DB_USER'),
+            password=os.getenv('DB_PASSWORD')
+        )
 
 def init_db():
     try:
