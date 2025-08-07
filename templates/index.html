@@ -58,7 +58,7 @@
         <h5 class="card-title">IBF - Teologia</h5>
         <p class="card-text">Esse curso tem o objetivo de trazer um entendimento completo do ensino teológico ... </p>
         <p>Duração: 4 anos</p>
-        <a href="#" class="btn btn-primary rounded-0 botao-lilas">Ver mais</a>
+        <a href="{{ url_for('teologia.teologia') }}" class="btn btn-primary rounded-0 botao-lilas">Ver mais</a>
       </div>
     </div>
   </div>
@@ -70,14 +70,14 @@
         <h5 class="card-title">IBF - Prospere</h5>
         <p class="card-text">O curso IBF-Prospere tem como objetivo trabalhar toda a parte financeira à luz da bíblia</p>
         <p>Duração: </p>
-        <a href="#" class="btn btn-primary rounded-0 botao-lilas">Ver mais</a>
+        <a href="{{ url_for('prospere.prospere') }}" class="btn btn-primary rounded-0 botao-lilas">Ver mais</a>
       </div>
     </div>
   </div>
 
   <div class="col-12 col-md-6 col-xxl-3">
     <div class="card w-100">
-      <img src="{{ url_for('static', filename='img/imagens/psicologia.png') }}" alt="">
+      <img src="{{ url_for('static', filename='img/imagens/Clinica Da Alma.jpg') }}" alt="">
       <div class="card-body">
         <h5 class="card-title">IBF - Clínica da Alma</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
@@ -89,7 +89,7 @@
 
   <div class="col-12 col-md-6 col-xxl-3">
     <div class="card w-100">
-      <img src="{{ url_for('static', filename='img/imagens/psicanalise.jpg') }}" alt="">
+      <img src="{{ url_for('static', filename='img/imagens/Psicanalise Crista.png') }}" alt="">
       <div class="card-body">
         <h5 class="card-title">IBF - Psicanálise</h5>
         <p class="card-text">A psicanálise é uma abordagem terapêutica que estuda o inconsciente humano...</p>

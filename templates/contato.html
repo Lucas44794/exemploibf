@@ -50,7 +50,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('success')) {
         alert('Sua mensagem foi enviada com sucesso!');
-        window.location.href = "{{ url_for('index') }}";  // Redireciona para a página inicial
+        window.location.href = "{{ url_for('home.index') }}";  // Redireciona para a página inicial
     }
 </script>
 {% endblock %}
