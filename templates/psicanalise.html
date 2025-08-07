@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block title %}
+IBF – Psicanálise Clínica
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary">Formação em Psicanálise Clínica – IBF</h1>
+        <p class="lead">Curso completo de três anos com habilitação para atuação clínica em todo o Brasil.</p>
+    </div>
+
+    <section class="mb-5">
+        <h2 class="h4 text-secondary">🧠 Sobre o Curso</h2>
+        <p>O curso de Psicanálise Clínica do IBF tem duração de três anos e prepara o aluno para atuar como psicanalista clínico, atendendo em consultório próprio ou em grupos. A formação é baseada no tripé psicanalítico: teoria, supervisão e análise pessoal.</p>
+        <p>Com base nos estudos de Freud, Lacan, Bion, Klein e Jung, o curso oferece uma abordagem profunda sobre o inconsciente humano e os transtornos mentais. O aluno poderá iniciar estágio supervisionado já no primeiro ano.</p>
+        <p>A psicanálise é indicada para tratar ansiedade, depressão, problemas de relacionamento, dificuldades de concentração e outros transtornos, com atendimentos individuais ou em grupo para adultos, adolescentes e crianças.</p>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="h4 text-secondary">📚 Grade Curricular</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-3 mt-3">
+            {% for disciplina in [
+                "INTRODUÇÃO A PSICANÁLISE I – Entenda a Psicanálise",
+                "HISTÓRIA DA PSICANÁLISE – Processo histórico de descobrimento",
+                "FASES PSICO-SEXUAIS DA CRIANÇA – Formação da psique e sexualidade",
+                "MECANISMOS DE DEFESA DO EGO – Defesa contra angústia",
+                "INTERPRETAÇÃO DE SONHOS – Porta do inconsciente",
+                "COMPLEXO DE ÉDIPO – Narcisismo e personalidade",
+                "COMPLEXO DE ELECTRA – Entendendo o feminino",
+                "MITO DE NARCISO – Narcisismo na construção da personalidade",
+                "ESTRUTURAS CLÍNICAS – Neurose, Psicose e Perversão",
+                "PSICANÁLISE E MITOLOGIA – Uso simbólico e terapêutico",
+                "PSICANÁLISE DEPOIS DE JUNG – Influência na compreensão psicanalítica",
+                "PSICANÁLISE E KLEIN – Teoria objetal e psicanálise infantil",
+                "PSICANÁLISE WINNICOTTIANA – Mãe suficientemente boa",
+                "PSICANÁLISE E BION – Estruturas do modo de pensar",
+                "TERAPIAS BREVES – Cura de traumas emocionais",
+                "PSICANÁLISE E TERAPIA FAMILIAR – Desenvolvimento familiar",
+                "10 PAPÉIS DO PSICANALISTA NO SÉCULO XXI",
+                "TRABALHO NO CONSULTÓRIO – Prática psicanalítica",
+                "TRANSTORNOS DA INFÂNCIA E ADOLESCÊNCIA",
+                "ORIGEM PSICOLÓGICA DAS DOENÇAS",
+                "10 TRANSTORNOS DE PERSONALIDADE",
+                "LUTO E SUA SIMBOLOGIA NA VIDA",
+                "TRANSTORNO BORDERLINE",
+                "TRANSTORNO DE ANSIEDADE E SUICÍDIO",
+                "LABORATÓRIO DE PSICANÁLISE – Prática clínica",
+                "COMPULSÕES E DEPENDÊNCIA QUÍMICA",
+                "PSICANÁLISE E ADICTOS",
+                "PSICOFARMACOLOGIA",
+                "PSICANÁLISE E A FAMÍLIA",
+                "PSICANÁLISE E NEUROCIÊNCIA",
+                "PSICANÁLISE, SAÚDE E SOCIEDADE",
+                "ÉTICA EM PSICANÁLISE E LEGISLAÇÃO",
+                "MARKETING PARA PSICANALISTAS",
+                "PSICANÁLISE E LITERATURA",
+                "SEXUALIDADE E PSICANÁLISE",
+                "TRABALHO DE CONCLUSÃO DO CURSO"
+            ] %}
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <p class="card-text">{{ disciplina }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="h4 text-secondary">✅ Requisitos e Certificação</h2>
+        <ul class="list-group list-group-flush mt-3">
+            <li class="list-group-item">Ter acima de 18 anos</li>
+            <li class="list-group-item">Ensino médio completo</li>
+            <li class="list-group-item">Aberto para todas as áreas profissionais</li>
+            <li class="list-group-item">Obrigatório: 50 horas de análise com psicanalista (presencial ou online)</li>
+            <li class="list-group-item">Certificado válido em todo território nacional</li>
+            <li class="list-group-item">Amparo legal pela Lei nº 9394/96 e Decretos nº 2.494/98 e nº 2.208/97</li>
+            <li class="list-group-item">Certificação emitida pelo Instituto Formação Psicanalítica</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="h4 text-secondary">👨‍🏫 Professores do Curso</h2>
+
+        {% for prof in [
+            {
+                "nome": "Bruno Vicentin",
+                "img": "bruno.jpg",
+                "bio": "Administrador, teólogo, doutor em Novo e Velho Testamento, especialista em psicanálise, sexologia, terapia familiar e cognitivo-comportamental. Diretor da Capelania Hospitalar de Santa Bárbara d'Oeste."
+            },
+            {
+                "nome": "José Valter Montever",
+                "img": "jose.jpg",
+                "bio": "Bacharel em Teologia, licenciando em Filosofia, pós-graduado em Psicologia Pastoral, mestre em Saúde Mental e psicanalista clínico."
+            },
+            {
+                "nome": "Nanashara Rodrigues",
+                "img": "nanashara.jpg",
+                "bio": "Formada em Administração com gestão em marketing, Teologia Básica e Avançada, Aconselhamento Cristão pelo IFC, psicanalista clínica e neuropsicanalista infantil."
+            },
+            {
+                "nome": "Luciana de Sene Bonilha",
+                "img": "luciana.jpg",
+                "bio": "Psicanalista, graduada em Análise de Sistemas e Ciências da Religião, MBA em Marketing, cursando Teologia no IFC."
+            }
+        ] %}
+        <div class="card mb-3">
+            <div class="card-body d-flex align-items-start">
+                <img src="/static/img/{{ prof.img }}" alt="Foto de {{ prof.nome }}" class="img-thumbnail me-3" style="max-width: 120px;">
+                <div>
+                    <h5 class="card-title">{{ prof.nome }}</h5>
+                    <p class="card-text">{{ prof.bio }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</div>
+{% endblock %}
