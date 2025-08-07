@@ -1,91 +1,110 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<main class="container py-5">
 
-<main>
+  <!-- Quem Somos -->
+  <section class="mb-5">
+    <h2 class="text-center fw-bold mb-4">Quem somos</h2>
 
-    <section class="principal">
-        <h2 class="titulo-principal"><strong>Quem somos</strong></h2>
-
-        <img class="utensilios2" src="{{ url_for('static', filename='images/logo/logo.png') }}" alt="Bruno Vicentin e sua esposa Tamera Vicentin">
-
-        <p>O IBF nasceu com a visão de equipar homens e mulheres para o serviço cristão em suas respectivas igrejas. Seu conteúdo não apenas edifica a vida espiritual, mas também trabalha com o caráter, buscando conformar os alunos à imagem de Cristo. O objetivo principal é servir e espalhar a esperança.</p>
-
-        <p id="missao"><em>Nossa missão é: <strong>"Fornecer ensinamentos para todas as áreas da vida cristã, incentivando os alunos a praticarem os ensinos recebidos. Buscamos capacitá-los a entender seu chamado e a importância de seu serviço para o Corpo de Cristo"</strong>.</em></p>
-
-        <p>O IBF também se dedica a oferecer ensino fundamentado e material próprio, contribuindo para o desenvolvimento espiritual e emocional dos alunos. Nosso compromisso é trazer luz, pela Palavra de Deus, para aqueles que desejam crescer no conhecimento e na graça, diante de Deus e dos homens.</p>
-    </section>
-
-    <section class="principal">
-        <h2 class="titulo-principal"><strong>Direção da Escola</strong></h2>
-
-        <img class="utensilios" src="{{ url_for('static', filename='images/site/brunoVicentin.jpg') }}" alt="Bíblia aberta representando os ensinamentos do IBF">
-        <p id="missao"><em> <strong>Bruno Gustavo Vicentin</strong>.</em></p>
-        <p><strong>Bruno Vicentin</strong>, Diretor Geral do Instituto 
-            Bíblico Fé, formado e pós graduado em 
-            ADM com ênfase em gestão de pessoas, 
-            formação teológica pelo instituto 
-            Shekinah, instituto Tsamah, instituto 
-            formação crista IFC, aconselhamento IFC, 
-            Especialização pelo IFC TEXAS CRISTIAN, 
-            reconhecimento teológico Unicesumar,
-            Doutorado em novo testamento pela 
-            FABAD, Diretor executivo da Capelania 
-            Hospitalar de Santa Barbara d oeste, Líder 
-            do ministério de intercessão e 
-            aconselhamento da Comunidade Templo 
-            Vivo, formado em psicanálise Sexólogo, 
-            Terapia sistêmica familiar.
-            </p>
-
-        <p id="missao"><em><strong>Tamera Alves do Vale Vicentin</strong>.</em></p>
-
-        <p><strong>Tamera Vicentin</strong>, Secretaria Geral do Instituto Bíblico Fé, Formada 
-            em Contabilidade, Graduada em Pedagogia com pós em Psicopedagogia, formação 
-            em Teologia pelo IFC.</p>
-    </section>
-
-    <section class="principal">
-
-        <img class="utensilios" src="{{ url_for('static', filename='images/site/pastorPaulo.jpg') }}" alt="Pastor Paulo Morimoto e sua esposa Elenice Morimoto">
-        <p id="missao"><em> <strong>Pastores Paulo e Elenice Morimoto</strong>.</em></p>
-        <p><strong>Pastores CEO da Comunidade Templo Vivo</strong>,
-            ministério com mais de 30 anos servindo ao 
-            Senhor, são pastores de cobertura espiritual 
-            do Instituto Bíblico Fé, auxiliando como 
-            mentores e aconselhando a equipe 
-            ministerial do Instituto, já ministraram em 
-            diversas igrejas no Brasil. Trabalharam 
-            equipando pastores e ministros que estão 
-            espalhados pela nação anunciando o 
-            evangelho com caráter de Cristo, Paulo e 
-            Elenice são referências em pastorear igrejas e 
-            formar ministros.
-
-            </p>
-    </section>
-
-
-
-
-
-
-
-
-
-    <h3 class="titulo-principal">Lista De Cursos</h3>
-    <div class="conteudo-beneficios">
-        <ul class="lista-beneficios">
-            <li class="itens">Teologia Básica</li>
-            <li class="itens">Teologia Avançada</li>
-            <li class="itens">Clinica da Alma</li>
-            <li class="itens">Psicanalise Cristã</li>
-            <li class="itens">Prosperidade Biblica</li>
-            
-        </ul>
-        <img class='utensilios5' src="{{ url_for('static', filename='images/logo/estudo.jpg') }}" class="imagembeneficios" alt="Imagem dos Benefícios">
+    <div class="text-center mb-4">
+      <img src="{{ url_for('static', filename='images/logo/logo.png') }}" alt="Bruno Vicentin e sua esposa Tamera Vicentin" class="img-fluid rounded">
     </div>
 
-    
+    <p class="lead">O IBF nasceu com a visão de equipar homens e mulheres para o serviço cristão em suas respectivas igrejas. Seu conteúdo não apenas edifica a vida espiritual, mas também trabalha com o caráter, buscando conformar os alunos à imagem de Cristo. O objetivo principal é servir e espalhar a esperança.</p>
+
+    <p class="fst-italic">Nossa missão é: <strong>"Fornecer ensinamentos para todas as áreas da vida cristã, incentivando os alunos a praticarem os ensinos recebidos. Buscamos capacitá-los a entender seu chamado e a importância de seu serviço para o Corpo de Cristo"</strong>.</p>
+
+    <p>O IBF também se dedica a oferecer ensino fundamentado e material próprio, contribuindo para o desenvolvimento espiritual e emocional dos alunos. Nosso compromisso é trazer luz, pela Palavra de Deus, para aqueles que desejam crescer no conhecimento e na graça, diante de Deus e dos homens.</p>
+  </section>
+
+  <!-- Direção da Escola -->
+  <section class="mb-5">
+    <h2 class="text-center fw-bold mb-4">Direção da Escola</h2>
+
+    <div class="text-center mb-3">
+      <img src="{{ url_for('static', filename='images/site/brunoVicentin.jpg') }}" alt="Bruno Vicentin" class="img-fluid rounded">
+    </div>
+
+    <p class="text-center fw-semibold fst-italic">Bruno Gustavo Vicentin</p>
+    <p><strong>Bruno Vicentin</strong>, Diretor Geral do Instituto Bíblico Fé, formado e pós-graduado em ADM com ênfase em gestão de pessoas, formação teológica pelo instituto Shekinah, instituto Tsamah, instituto formação cristã IFC, aconselhamento IFC, Especialização pelo IFC TEXAS CRISTIAN, reconhecimento teológico Unicesumar, Doutorado em novo testamento pela FABAD, Diretor executivo da Capelania Hospitalar de Santa Barbara d'Oeste, Líder do ministério de intercessão e aconselhamento da Comunidade Templo Vivo, formado em psicanálise, sexólogo, terapia sistêmica familiar.</p>
+
+    <p class="text-center fw-semibold fst-italic">Tamera Alves do Vale Vicentin</p>
+    <p><strong>Tamera Vicentin</strong>, Secretária Geral do Instituto Bíblico Fé, formada em Contabilidade, graduada em Pedagogia com pós em Psicopedagogia, formação em Teologia pelo IFC.</p>
+  </section>
+
+<!-- Lista de Cursos -->
+<section class="mb-5">
+  <h3 class="text-center fw-bold mb-4">Lista de Cursos</h3>
+
+  <div class="row g-4 align-items-center">
+    <!-- Lista de cursos -->
+    <div class="col-md-6">
+      <ul class="list-group">
+        <li class="list-group-item text-center"><a href="{{ url_for('teologia.teologia') }}" class="text-decoration-none color-white">IBF - Teologia</a></li>
+        <li class="list-group-item text-center"><a href="{{ url_for('clinica.clinica') }}" class="text-decoration-none color-white">IBF - Clínica da Alma</a></li>
+        <li class="list-group-item text-center"><a href="{{ url_for('psicanalise.psicanalise') }}" class="text-decoration-none color-white">IBF - Psicanálise</a></li>
+        <li class="list-group-item text-center"><a href="{{ url_for('prospere.prospere') }}" class="text-decoration-none color-white">IBF - Prospere</a></li>
+      </ul>
+    </div>
+
+    <!-- Imagem com altura limitada -->
+    <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+      <img src="{{ url_for('static', filename='img/logo/logo.png') }}"
+           alt="Imagem dos Benefícios"
+           class="img-fluid rounded"
+           style="max-height: 250px; width: auto;">
+    </div>
+  </div>
+</section>
+
+  <!-- Direção em Santo Antônio de Posse -->
+<section class="mb-5">
+  <h2 class="text-center fw-bold mb-4">Direção em Santo Antônio de Posse</h2>
+
+  <div class="text-center mb-3">
+    <img src="{{ url_for('static', filename='images/site/direcaoPosse.jpg') }}" alt="Direção Santo Antônio de Posse" class="img-fluid rounded">
+  </div>
+
+  <p class="text-center fw-semibold fst-italic">Coordenadores Locais</p>
+  <p>A unidade de Santo Antônio de Posse é liderada por uma equipe dedicada que compartilha da mesma visão do Instituto: formar discípulos comprometidos com o Reino de Deus. A direção local atua com excelência na organização dos cursos, acompanhamento dos alunos e integração com a comunidade cristã da região.</p>
+</section>
+
+<!-- Endereços das Escolas -->
+<section class="mb-5">
+  <h2 class="text-center fw-bold mb-4">Endereços das Unidades</h2>
+  <P class="text-center">Para melhor atender nossos alunos, trabalhamos em dois endereços:</P>
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Unidade Santa Bárbara d'Oeste</h5>
+          <p class="card-text">
+            Rua Exemplo, 123<br>
+            Bairro Centro<br>
+            Santa Bárbara d'Oeste - SP<br>
+            CEP: 13450-000
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Unidade Santo Antônio de Posse</h5>
+          <p class="card-text">
+            Avenida Modelo, 456<br>
+            Bairro Jardim das Flores<br>
+            Santo Antônio de Posse - SP<br>
+            CEP: 13830-000
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 {% endblock %}
