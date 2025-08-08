@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="height: 60vh;" class="container mt-5">
+    <div class="text-center mb-4">
+        <h2>Agende um Seminário em Sua Igreja</h2>
+        <p class="lead">Leve conhecimento e edificação espiritual para sua comunidade.</p>
+    </div>
+
+    <div class="card">
+        <div class="card-header bg-primary text-white text-center">
+            <h4 class="mb-0">Seminários Disponíveis</h4>
+        </div>
+        <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item">📖 Apocalipse</li>
+            <li class="list-group-item">🙏 Intercessão</li>
+            <li class="list-group-item">🔥 Mizbeha</li>
+        </ul>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="{{ url_for('contato.contato') }}" class="btn btn-success btn-lg">Agendar Seminário</a>
+    </div>
+</div>
+{% endblock %}

@@ -9,6 +9,7 @@ from .prospere import prospere_bp
 from .teologia import teologia_bp
 from .psicanalise import psicanalise_bp
 from .clinica import clinica_bp
+from .seminario import seminario_bp
 
 def register_routes(app):
     app.register_blueprint(home_bp)
@@ -22,3 +23,4 @@ def register_routes(app):
     app.register_blueprint(teologia_bp)
     app.register_blueprint(psicanalise_bp)
     app.register_blueprint(clinica_bp)
+    app.register_blueprint(seminario_bp)
